@@ -118,8 +118,8 @@ public class Auto_RED_DRV_Time_Lin_Pbot extends LinearOpMode {
         }
 
         // Step 4:  Stop and close the claw.
-        //robot.leftMotor.setPower(0);
-        //robot.rightMotor.setPower(0);
+        robot.leftMotor.setPower(0);
+        robot.rightMotor.setPower(0);
         //robot.leftClaw.setPosition(1.0);
         //robot.rightClaw.setPosition(0.0);
 
