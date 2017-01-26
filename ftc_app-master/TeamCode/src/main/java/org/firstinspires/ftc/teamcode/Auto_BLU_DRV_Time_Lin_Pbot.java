@@ -61,7 +61,7 @@ import org.firstinspires.ftc.robotcontroller.external.samples.HardwarePushbot;
  */
 
 @Autonomous(name="Pushbot: Auto Drive By Time", group="Pushbot")
-/*@Disabled*/
+//@Disabled
 public class Auto_BLU_DRV_Time_Lin_Pbot extends LinearOpMode {
 
     /* Declare OpMode members. */
@@ -90,34 +90,34 @@ public class Auto_BLU_DRV_Time_Lin_Pbot extends LinearOpMode {
 
         // Step through each leg of the path, ensuring that the Auto mode has not been stopped along the way
 
-        // Step 1:  Drive forward for 4 seconds
+        // Step 1:  Drive forward for 3 seconds
         robot.leftMotor.setPower(FORWARD_SPEED);
         robot.rightMotor.setPower(FORWARD_SPEED);
         runtime.reset();
-        while (opModeIsActive() && (runtime.seconds() < 6.0)) {
+        while (opModeIsActive() && (runtime.seconds() < 3.0)) {
             telemetry.addData("Path", "Leg 1: %2.5f S Elapsed", runtime.seconds());
             telemetry.update();
         }
 
-        // Step 2:  Drive Backwards for 1 Second
+        // Step 2:  Drive Backwards for .5 Second
         robot.leftMotor.setPower(-FORWARD_SPEED);
         robot.rightMotor.setPower(-FORWARD_SPEED);
         runtime.reset();
-        while (opModeIsActive() && (runtime.seconds() < 2.0)) {
+        while (opModeIsActive() && (runtime.seconds() < 0.5)) {
             telemetry.addData("Path", "Leg 2: %2.5f S Elapsed", runtime.seconds());
             telemetry.update();
         }
-        // Step 3:  Spin right for 1.45 seconds
+        // Step 3:  Spin right for 1.0 seconds
 
         robot.leftMotor.setPower(TURN_SPEED);
         robot.rightMotor.setPower(-TURN_SPEED);
         runtime.reset();
-        while (opModeIsActive() && (runtime.seconds() < 1.3)) {
+        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
             telemetry.addData("Path", "Leg 3: %2.5f S Elapsed", runtime.seconds());
             telemetry.update();
         }
 
-        // Step 4:  Drive forward for 4 seconds
+        // Step 4:  Drive forward for 2.5 seconds
         robot.leftMotor.setPower(FORWARD_SPEED);
         robot.rightMotor.setPower(FORWARD_SPEED);
         runtime.reset();

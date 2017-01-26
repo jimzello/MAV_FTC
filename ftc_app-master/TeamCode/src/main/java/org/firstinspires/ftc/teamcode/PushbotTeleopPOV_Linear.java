@@ -54,16 +54,14 @@ import org.firstinspires.ftc.robotcontroller.external.samples.HardwarePushbot;
  */
 
 @TeleOp(name="Pushbot: Teleop POV", group="Pushbot")
-/*
-@Disabled
-*/
+//@Disabled
 public class PushbotTeleopPOV_Linear extends LinearOpMode {
 
     /* Declare OpMode members. */
     HardwarePushbot robot           = new HardwarePushbot();   // Use a Pushbot's hardware
                                                                // could also use HardwarePushbotMatrix class.
-    double          clawOffset      = 0;                       // Servo mid position
-    final double    CLAW_SPEED      = 0.02 ;                   // sets rate to move servo
+//    double          clawOffset      = 0;                       // Servo mid position
+//    final double    CLAW_SPEED      = 0.02 ;                   // sets rate to move servo
 
     @Override
     public void runOpMode() {
